@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="Blocker">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="main-layout" layout="row" ng-controller="MainController as mainCtrl">
+            <aside id="sidebar" flex="none">
+                <h1 class="md-display-2">Blocker demo</h1>
+                <h2>Map</h2>
+                <h3>Width</h3>{{mainCtrl.data.info.width}}
+                <h3>Height</h3>{{mainCtrl.data.info.height}}
+
+                <ul>
+                    <li>Total: {{mainCtrl.data.info.totalBlocks}}</li>
+                    <li ng-repeat="(block, occupation) in mainCtrl.data.info.blocks">
+                        {{block}}: {{occupation}}
+                    </li>
+                </ul>
+            </aside>
+
+            <section id="container" flex layout="row" layout-align="center center">
+                <div id="grid" flex="none" map-drawer map="mainCtrl.data.map"></div>
+            </section>
+        </div>
+
+
+        <script src="js/plugins.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-material/angular-material.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+
+        <script src="bower_components/d3/d3.js"></script>
+        <script src="bower_components/socket.io-client/socket.io.js"></script>
+
+        <script src="js/application.js"></script>
+        <script src="js/main/main.js"></script>
+        <script src="js/map-drawer/map-drawer.js"></script>
+        <script src="js/map-drawer/map-drawer-directive.js"></script>
+        <script src="js/map-drawer/player-service.js"></script>
+        <script src="js/map-drawer/map-player-drawer.js"></script>
+
+    </body>
+</html>
