@@ -113,7 +113,8 @@ angular.module('Main').factory('SocketClient', [function () {
             socket.on(EVENTS.MAP_UPDATED, function (data) {
                 console.log('on EVENTS.MAP_UPDATED');
                 drawFn(data);
-            }); // request map for first time
+            });
+            // request map for first time
             socket.emit(EVENTS.MAP);
         });
     }

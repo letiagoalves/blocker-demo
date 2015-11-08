@@ -79,7 +79,7 @@ angular.module('MapDrawer').directive('mapDrawer', ['$interval', 'PlayerServive'
         cells.attr('opacity', function (d) {
             var isVisible = d.mapX > visibleBoundaries.minX && d.mapX < visibleBoundaries.maxX && d.mapY > visibleBoundaries.minY && d.mapY < visibleBoundaries.maxY;
 
-            return isVisible ? 1 : 0.5;
+            return isVisible ? 1 : 0.6;
         });
     }
 

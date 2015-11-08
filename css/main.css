@@ -104,9 +104,9 @@ body {
 }
 
 #sidebar {
-    width: 300px;
+    padding: 24px;
     overflow: auto;
-    background-color: green;
+    background-color: #bbbbbb;
 }
 
 #container {
@@ -127,7 +127,9 @@ body {
     fill: #dddddd;
 }
 
-
+.block-image {
+    border: 1px solid black;
+}
 
 
 

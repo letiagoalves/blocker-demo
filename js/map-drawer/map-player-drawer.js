@@ -2,7 +2,7 @@ angular.module('MapDrawer').factory('MapPlayerDrawer', ['$rootScope', function (
     'use strict';
 
     var player;
-    var playerSize = 20;
+    var playerSize = 16;
 
     function draw(playerLayer) {
         player = playerLayer
